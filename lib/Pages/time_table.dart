@@ -52,58 +52,138 @@ class TimeTable extends StatelessWidget {
         body: Center(
           child: ListView(
             children: <Widget>[
-              Text('\nMONDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Monday'),fontSize: 19)),
-              Container(
-                child: ListView.builder(
-                  itemCount: mon.length,
-                  physics: const ClampingScrollPhysics(),
-                  shrinkWrap: true ,
-                  itemBuilder: (context, index) => ListTile(
-                    title: Text('${mon[index]}',textAlign: TextAlign.center,style: TextStyle(fontSize:14)),
+              Center(
+                child: Container(
+                  width: 320,
+                  child: Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(13.0),
+                      child : ListView(
+                        physics: const ClampingScrollPhysics(),
+                        shrinkWrap: true,
+                        children: <Widget>[
+                          Text('MONDAY',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Monday'),fontSize: 19)),
+                          Container(
+                            child: ListView.builder(
+                              itemCount: mon.length,
+                              physics: const ClampingScrollPhysics(),
+                              shrinkWrap: true ,
+                              itemBuilder: (context, index) => ListTile(
+                                title: Text('${mon[index]}',textAlign: TextAlign.center,style: TextStyle(fontSize:14)),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
-              Text('\nTUESDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Tuesday'),fontSize: 19)),
-              Container(
-                child: ListView.builder(
-                  itemCount: tue.length,
-                  physics: const ClampingScrollPhysics(),
-                  shrinkWrap: true ,
-                  itemBuilder: (context, index) => ListTile(
-                    title: Text('${tue[index]}',textAlign: TextAlign.center,style: TextStyle(fontSize:14)),
+              Center(
+                child: Container(
+                  width: 320,
+                  child: Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(13.0),
+                      child : ListView(
+                        physics: const ClampingScrollPhysics(),
+                        shrinkWrap: true,
+                        children: <Widget>[
+                          Text('TUESDAY',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Tuesday'),fontSize: 19)),
+                          Container(
+                            child: ListView.builder(
+                              itemCount: tue.length,
+                              physics: const ClampingScrollPhysics(),
+                              shrinkWrap: true ,
+                              itemBuilder: (context, index) => ListTile(
+                                title: Text('${tue[index]}',textAlign: TextAlign.center,style: TextStyle(fontSize:14)),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
-              Text('\nWEDNESDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Wednesday'),fontSize: 19)),
-              Container(
-                child: ListView.builder(
-                  itemCount: wed.length,
-                  physics: const ClampingScrollPhysics(),
-                  shrinkWrap: true ,
-                  itemBuilder: (context, index) => ListTile(
-                    title: Text('${wed[index]}',textAlign: TextAlign.center,style: TextStyle(fontSize:14)),
+              Center(
+                child: Container(
+                  width: 320,
+                  child: Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(13.0),
+                      child : ListView(
+                        physics: const ClampingScrollPhysics(),
+                        shrinkWrap: true,
+                        children: <Widget>[
+                          Text('WEDNESDAY',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Wednesday'),fontSize: 19)),
+                          Container(
+                            child: ListView.builder(
+                              itemCount: wed.length,
+                              physics: const ClampingScrollPhysics(),
+                              shrinkWrap: true ,
+                              itemBuilder: (context, index) => ListTile(
+                                title: Text('${wed[index]}',textAlign: TextAlign.center,style: TextStyle(fontSize:14)),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
-              Text('\nTHURSDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Thursday'),fontSize: 19)),
-              Container(
-                child: ListView.builder(
-                  itemCount: thu.length,
-                  physics: const ClampingScrollPhysics(),
-                  shrinkWrap: true ,
-                  itemBuilder: (context, index) => ListTile(
-                    title: Text('${thu[index]}',textAlign: TextAlign.center,style: TextStyle(fontSize:14)),
+              Center(
+                child: Container(
+                  width: 320,
+                  child: Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(13.0),
+                      child : ListView(
+                        physics: const ClampingScrollPhysics(),
+                        shrinkWrap: true,
+                        children: <Widget>[
+                          Text('THURSDAY',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Thursday'),fontSize: 19)),
+                          Container(
+                            child: ListView.builder(
+                              itemCount: thu.length,
+                              physics: const ClampingScrollPhysics(),
+                              shrinkWrap: true ,
+                              itemBuilder: (context, index) => ListTile(
+                                title: Text('${thu[index]}',textAlign: TextAlign.center,style: TextStyle(fontSize:14)),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
-              Text('\nFRIDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Friday'),fontSize: 19)),
-              Container(
-                child: ListView.builder(
-                  itemCount: fri.length,
-                  physics: const ClampingScrollPhysics(),
-                  shrinkWrap: true ,
-                  itemBuilder: (context, index) => ListTile(
-                    title: Text('${fri[index]}',textAlign: TextAlign.center,style: TextStyle(fontSize:14)),
+              Center(
+                child: Container(
+                  width: 320,
+                  child: Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(13.0),
+                      child : ListView(
+                        physics: const ClampingScrollPhysics(),
+                        shrinkWrap: true,
+                        children: <Widget>[
+                          Text('FRIDAY',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Friday'),fontSize: 19)),
+                          Container(
+                            child: ListView.builder(
+                              itemCount: fri.length,
+                              physics: const ClampingScrollPhysics(),
+                              shrinkWrap: true ,
+                              itemBuilder: (context, index) => ListTile(
+                                title: Text('${fri[index]}',textAlign: TextAlign.center,style: TextStyle(fontSize:14)),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
