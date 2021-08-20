@@ -8,6 +8,12 @@ class TimeTable extends StatelessWidget {
   static final DateFormat formatter = DateFormat('EEEE');
   final String curr_day = formatter.format(now);
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  Color day_color(day_given){
+        if(day_given==curr_day){
+          return Color(0xFF84f6c8);
+        }
+        return Color(0xFF90b8f8);
+  }
   @override
   Widget build(BuildContext context) {
     //Only modify these lines to change the timetable according to your needs
@@ -46,10 +52,7 @@ class TimeTable extends StatelessWidget {
         body: Center(
           child: ListView(
             children: <Widget>[
-              if(curr_day!='Monday')
-                Text('\nMONDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Color(0xFF90b8f8),fontSize: 19)),
-              if(curr_day=='Monday')
-                Text('\nMONDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Color(0xFF84f6c8),fontSize: 19)),
+              Text('\nMONDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Monday'),fontSize: 19)),
               Container(
                 child: ListView.builder(
                   itemCount: mon.length,
@@ -60,10 +63,7 @@ class TimeTable extends StatelessWidget {
                   ),
                 ),
               ),
-              if(curr_day!='Tuesday')
-                Text('\nTUESDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Color(0xFF90b8f8),fontSize: 19)),
-              if(curr_day=='Tuesday')
-                Text('\nTUESDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Color(0xFF84f6c8),fontSize: 19)),
+              Text('\nTUESDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Tuesday'),fontSize: 19)),
               Container(
                 child: ListView.builder(
                   itemCount: tue.length,
@@ -74,10 +74,7 @@ class TimeTable extends StatelessWidget {
                   ),
                 ),
               ),
-              if(curr_day!='Wednesday')
-                Text('\nWEDNESDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Color(0xFF90b8f8),fontSize: 19)),
-              if(curr_day=='Wednesday')
-                Text('\nWEDNESDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Color(0xFF84f6c8),fontSize: 19)),
+              Text('\nWEDNESDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Wednesday'),fontSize: 19)),
               Container(
                 child: ListView.builder(
                   itemCount: wed.length,
@@ -88,10 +85,7 @@ class TimeTable extends StatelessWidget {
                   ),
                 ),
               ),
-              if(curr_day!='Thursday')
-                Text('\nTHURSDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Color(0xFF90b8f8),fontSize: 19)),
-              if(curr_day=='Thursday')
-                Text('\nTHURSDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Color(0xFF84f6c8),fontSize: 19)),
+              Text('\nTHURSDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Thursday'),fontSize: 19)),
               Container(
                 child: ListView.builder(
                   itemCount: thu.length,
@@ -102,10 +96,7 @@ class TimeTable extends StatelessWidget {
                   ),
                 ),
               ),
-              if(curr_day!='Friday')
-                Text('\nFRIDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Color(0xFF90b8f8),fontSize: 19)),
-              if(curr_day=='Friday')
-                Text('\nFRIDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: Color(0xFF84f6c8),fontSize: 19)),
+              Text('\nFRIDAY ',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Friday'),fontSize: 19)),
               Container(
                 child: ListView.builder(
                   itemCount: fri.length,
