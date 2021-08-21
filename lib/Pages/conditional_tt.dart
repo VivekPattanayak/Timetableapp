@@ -7,11 +7,11 @@ import 'package:slide_digital_clock/slide_digital_clock.dart';
 class CTT extends StatelessWidget {
   //Only modify these lines to change the timetable according to your needs
   //start_________________________________________________________________________________________________________________________________
-  final List<String> mon= ['9:00AM-9:50AM ➔ OE-I','10:00AM-12:50PM ➔ DBMS Lab','❖','1:30PM-2:20PM ➔ DCCN','2:30PM-3:20PM ➔ DCCN','3:30PM-4:20PM ➔ Minor1 /In-Depth 1','4:30PM-5:20PM ➔ Minor 2/In-Depth 2'];
-  final List<String> tue= ['9:00AM-9:50AM ➔ DBMS','10:00AM-10:50AM ➔ OE-I','11:00AM-11:50AM ➔ SE','12:00PM-12:50PM ➔ FLAT','❖','1:30PM-4:20PM ➔ DCCN Lab','4:30PM-5:20PM ➔ Minor 1/In-Depth 1'];
-  final List<String> wed= ['9:00AM-9:50AM ➔ DBMS','10:00AM-10:50AM ➔ OE-I','11:00AM-11:50AM ➔ SC/CC','12:00PM-12:50PM ➔ SE','❖','1:30PM-4:20PM ➔ SK Lab','4:30PM-5:20PM ➔ Minor 2/In-Depth 2'];
-  final List<String> thu= ['9:00AM-9:50AM ➔ SC/CC','10:00AM-10:50AM ➔ DBMS','11:00AM-11:50AM ➔ SE','12:00PM-12:50PM ➔ FLAT','❖','1:30PM-4:20PM ➔ SE Lab','4:30PM-5:20PM ➔ Minor 1/In-Depth 1'];
-  final List<String> fri= ['9:00AM-9:50AM ➔ DCCN','10:00AM-10:50AM ➔ DCCN','11:00AM-11:50AM ➔ SC/CC','12:00PM-12:50PM ➔ FLAT','❖','2:30PM-3:20PM ➔ SP Lab','3:30PM-4:20PM ➔ SP Lab','4:30PM-5:20PM ➔ Minor 2/In-Depth 2'];
+  final List<String> mon= ['9:00AM-9:50AM ➔ French','10:00AM-12:50PM ➔ DBMS Lab','❖','1:30PM-2:20PM ➔ DCCN','2:30PM-3:20PM ➔ DCCN'];
+  final List<String> tue= ['9:00AM-9:50AM ➔ DBMS','10:00AM-10:50AM ➔ French','11:00AM-11:50AM ➔ SE','12:00PM-12:50PM ➔ FLAT','❖','1:30PM-4:20PM ➔ DCCN Lab'];
+  final List<String> wed= ['9:00AM-9:50AM ➔ DBMS','10:00AM-10:50AM ➔ French','11:00AM-11:50AM ➔ SC/CC','12:00PM-12:50PM ➔ SE','❖','1:30PM-4:20PM ➔ SK Lab'];
+  final List<String> thu= ['9:00AM-9:50AM ➔ SC/CC','10:00AM-10:50AM ➔ DBMS','11:00AM-11:50AM ➔ SE','12:00PM-12:50PM ➔ FLAT','❖','1:30PM-4:20PM ➔ SE Lab'];
+  final List<String> fri= ['9:00AM-9:50AM ➔ DCCN','10:00AM-10:50AM ➔ DCCN','11:00AM-11:50AM ➔ SC/CC','12:00PM-12:50PM ➔ FLAT'];
   //final List<String> sat= [''];
   //end_________________________________________________________________________________________________________________________________
   static final DateTime now = DateTime.now();
@@ -51,9 +51,7 @@ class CTT extends StatelessWidget {
               child: ListView(
                 children: <Widget>[
               Container(
-              margin: EdgeInsets.all(0),
-              padding: EdgeInsets.all(0),
-              child: Text('\n${curr_day}',textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Channel',color: Color(0xFF90b8f8),fontSize: 42)),
+              child: Text('\n${curr_day}',textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Channel',color: Color(0xFF4d79ff),fontSize: 43)),
               ),
               SizedBox(
                 height: 10,
@@ -73,9 +71,9 @@ class CTT extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 30,
                 ),
-                amPmDigitTextStyle: TextStyle(color: Color(0xFF90b8f8), fontWeight: FontWeight.bold),
+                amPmDigitTextStyle: TextStyle(color: Color(0xFF4d79ff), fontWeight: FontWeight.bold),
               ),
-              Text('════════════',textAlign: TextAlign.center,style: TextStyle(color:Color(0xFF536178),fontSize: 20)),
+              Text('════════════',textAlign: TextAlign.center,style: TextStyle(color:Color(0xFF4d4d4d),fontSize: 20)),
               if(curr_day=='Monday')
                 Container(
                   child: ListView.builder(
@@ -150,8 +148,8 @@ class CTT extends StatelessWidget {
               ),
             );
           },
-          child: Icon(Icons.sort_sharp,color:Color(0xFFB6B2B8),),
-          backgroundColor: Color(0xFF000000),
+          child: Icon(Icons.sort_sharp,color:Color(0xFFffffff),),
+          backgroundColor: Color(0xFF00134d),
         ),
         drawer:
         Container(

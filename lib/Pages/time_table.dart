@@ -12,17 +12,17 @@ class TimeTable extends StatelessWidget {
         if(day_given==curr_day){
           return Color(0xFF84f6c8);
         }
-        return Color(0xFF90b8f8);
+        return Color(0xFF3366ff);
   }
   @override
   Widget build(BuildContext context) {
     //Only modify these lines to change the timetable according to your needs
     //_________________________________________________________________________________________________________________________________
-    final List<String> mon= ['9:00AM-9:50AM ➔ OE-I\n10:00AM-12:50PM ➔ DBMS Lab\n❖\n1:30PM-2:20PM ➔ DCCN\n2:30PM-3:20PM ➔ DCCN\n3:30PM-4:20PM ➔ Minor1 /In-Depth 1\n4:30PM-5:20PM ➔ Minor 2/In-Depth 2'];
-    final List<String> tue= ['9:00AM-9:50AM ➔ DBMS\n10:00AM-10:50AM ➔ OE-I\n11:00AM-11:50AM ➔ SE\n12:00PM-12:50PM ➔ FLAT\n❖\n1:30PM-4:20PM ➔ DCCN Lab\n4:30PM-5:20PM ➔ Minor 1/In-Depth 1'];
-    final List<String> wed= ['9:00AM-9:50AM ➔ DBMS\n10:00AM-10:50AM ➔ OE-I\n11:00AM-11:50AM ➔ SC/CC\n12:00PM-12:50PM ➔ SE\n❖\n1:30PM-4:20PM ➔ SK Lab\n4:30PM-5:20PM ➔ Minor 2/In-Depth 2'];
-    final List<String> thu= ['9:00AM-9:50AM ➔ SC/CC\n10:00AM-10:50AM ➔ DBMS\n11:00AM-11:50AM ➔ SE\n12:00PM-12:50PM ➔ FLAT\n❖\n1:30PM-4:20PM ➔ SE Lab\n4:30PM-5:20PM ➔ Minor 1/In-Depth 1'];
-    final List<String> fri= ['9:00AM-9:50AM ➔ DCCN\n10:00AM-10:50AM ➔ DCCN\n11:00AM-11:50AM ➔ SC/CC\n12:00PM-12:50PM ➔ FLAT\n❖\n2:30PM-3:20PM ➔ SP Lab\n3:30PM-4:20PM ➔ SP Lab\n4:30PM-5:20PM ➔ Minor 2/In-Depth 2'];
+    final List<String> mon= ['9:00AM-9:50AM ➔ French\n10:00AM-12:50PM ➔ DBMS Lab\n❖\n1:30PM-2:20PM ➔ DCCN\n2:30PM-3:20PM ➔ DCCN'];
+    final List<String> tue= ['9:00AM-9:50AM ➔ DBMS\n10:00AM-10:50AM ➔ French\n11:00AM-11:50AM ➔ SE\n12:00PM-12:50PM ➔ FLAT\n❖\n1:30PM-4:20PM ➔ DCCN Lab'];
+    final List<String> wed= ['9:00AM-9:50AM ➔ DBMS\n10:00AM-10:50AM ➔ French\n11:00AM-11:50AM ➔ SC/CC\n12:00PM-12:50PM ➔ SE\n❖\n1:30PM-4:20PM ➔ SK Lab'];
+    final List<String> thu= ['9:00AM-9:50AM ➔ SC/CC\n10:00AM-10:50AM ➔ DBMS\n11:00AM-11:50AM ➔ SE\n12:00PM-12:50PM ➔ FLAT\n❖\n1:30PM-4:20PM ➔ SE Lab'];
+    final List<String> fri= ['9:00AM-9:50AM ➔ DCCN\n10:00AM-10:50AM ➔ DCCN\n11:00AM-11:50AM ➔ SC/CC\n12:00PM-12:50PM ➔ FLAT'];
     final List<String> sat= [''];
     //Do not try to implement them as separate elements, as the space between subjects will not be compact if done in that manner
     //_________________________________________________________________________________________________________________________________
@@ -42,11 +42,12 @@ class TimeTable extends StatelessWidget {
       home: Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
+          backgroundColor: Colors.black,
           centerTitle: true,
           title: Text('MO-2021 (Sem V)'),
             leading: new IconButton(
                 icon: new Icon(Icons.info,color:Color(0xFFB6B2B8),),
-                color: Color(0xFF26282b),
+                color: Color(0xFF1f1f1f),
                 onPressed: () => _scaffoldKey.currentState.openDrawer()),
         ),
         body: Center(
@@ -54,15 +55,19 @@ class TimeTable extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: Container(
-                  width: 320,
+                  width: 290,
                   child: Card(
+                    color: Color(0xFF1a1a1a),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
                     child: Padding(
                       padding: EdgeInsets.all(13.0),
                       child : ListView(
                         physics: const ClampingScrollPhysics(),
                         shrinkWrap: true,
                         children: <Widget>[
-                          Text('MONDAY',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Monday'),fontSize: 19)),
+                          Text('Monday',textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Poppins',fontWeight: FontWeight.w500,color: day_color('Monday'),fontSize: 21)),
                           Container(
                             child: ListView.builder(
                               itemCount: mon.length,
@@ -81,15 +86,19 @@ class TimeTable extends StatelessWidget {
               ),
               Center(
                 child: Container(
-                  width: 320,
+                  width: 290,
                   child: Card(
+                    color: Color(0xFF1a1a1a),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
                     child: Padding(
                       padding: EdgeInsets.all(13.0),
                       child : ListView(
                         physics: const ClampingScrollPhysics(),
                         shrinkWrap: true,
                         children: <Widget>[
-                          Text('TUESDAY',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Tuesday'),fontSize: 19)),
+                          Text('Tuesday',textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Poppins',fontWeight: FontWeight.w500,color: day_color('Tuesday'),fontSize: 21)),
                           Container(
                             child: ListView.builder(
                               itemCount: tue.length,
@@ -108,15 +117,19 @@ class TimeTable extends StatelessWidget {
               ),
               Center(
                 child: Container(
-                  width: 320,
+                  width: 290,
                   child: Card(
+                    color: Color(0xFF1a1a1a),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
                     child: Padding(
                       padding: EdgeInsets.all(13.0),
                       child : ListView(
                         physics: const ClampingScrollPhysics(),
                         shrinkWrap: true,
                         children: <Widget>[
-                          Text('WEDNESDAY',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Wednesday'),fontSize: 19)),
+                          Text('Wednesday',textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Poppins',fontWeight: FontWeight.w500,color: day_color('Wednesday'),fontSize: 21)),
                           Container(
                             child: ListView.builder(
                               itemCount: wed.length,
@@ -135,15 +148,19 @@ class TimeTable extends StatelessWidget {
               ),
               Center(
                 child: Container(
-                  width: 320,
+                  width: 290,
                   child: Card(
+                    color: Color(0xFF1a1a1a),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
                     child: Padding(
                       padding: EdgeInsets.all(13.0),
                       child : ListView(
                         physics: const ClampingScrollPhysics(),
                         shrinkWrap: true,
                         children: <Widget>[
-                          Text('THURSDAY',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Thursday'),fontSize: 19)),
+                          Text('Thursday',textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Poppins',fontWeight: FontWeight.w500,color: day_color('Thursday'),fontSize: 21)),
                           Container(
                             child: ListView.builder(
                               itemCount: thu.length,
@@ -162,15 +179,19 @@ class TimeTable extends StatelessWidget {
               ),
               Center(
                 child: Container(
-                  width: 320,
+                  width: 290,
                   child: Card(
+                    color: Color(0xFF1a1a1a),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
                     child: Padding(
                       padding: EdgeInsets.all(13.0),
                       child : ListView(
                         physics: const ClampingScrollPhysics(),
                         shrinkWrap: true,
                         children: <Widget>[
-                          Text('FRIDAY',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold,decoration: TextDecoration.underline,color: day_color('Friday'),fontSize: 19)),
+                          Text('Friday',textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Poppins',fontWeight: FontWeight.w500,color: day_color('Friday'),fontSize: 21)),
                           Container(
                             child: ListView.builder(
                               itemCount: fri.length,
@@ -202,8 +223,8 @@ class TimeTable extends StatelessWidget {
               ),
             );
           },
-          child: Icon(Icons.north_west,color:Color(0xFFB6B2B8)),
-          backgroundColor: Color(0xFF181a1c),
+          child: Icon(Icons.north_west,color:Color(0xFFffffff)),
+          backgroundColor: Color(0xFF00134d),
         ),
         drawer:
         Container(
