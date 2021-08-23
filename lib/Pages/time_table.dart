@@ -12,7 +12,7 @@ class TimeTable extends StatelessWidget {
         if(day_given==curr_day){
           return Color(0xFF84f6c8);
         }
-        return Color(0xFF3366ff);
+        return Color(0xFF809fff);
   }
   @override
   Widget build(BuildContext context) {
@@ -53,6 +53,9 @@ class TimeTable extends StatelessWidget {
         body: Center(
           child: ListView(
             children: <Widget>[
+              SizedBox(
+                height: 4,
+              ),
               Center(
                 child: Container(
                   width: 290,
@@ -208,6 +211,9 @@ class TimeTable extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 10,
+              ),
             ],
 
           ),
@@ -223,8 +229,8 @@ class TimeTable extends StatelessWidget {
               ),
             );
           },
-          child: Icon(Icons.north_west,color:Color(0xFFffffff)),
-          backgroundColor: Color(0xFF00134d),
+          child: Icon(Icons.north_west,color:Color(0xFF000000),),
+          backgroundColor: Color(0xFF809fff),
         ),
         drawer:
         Container(

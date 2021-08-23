@@ -50,11 +50,14 @@ class CTT extends StatelessWidget {
         body: Center(
               child: ListView(
                 children: <Widget>[
-              Container(
-              child: Text('\n${curr_day}',textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Channel',color: Color(0xFF4d79ff),fontSize: 43)),
-              ),
               SizedBox(
                 height: 10,
+              ),
+              Container(
+              child: Text('${curr_day}',textAlign: TextAlign.center,style: TextStyle(fontFamily: 'Sherlyn',color: Color(0xFF809fff),fontSize: 85)),
+              ),
+              SizedBox(
+                height: 5,
               ),
               //This is from a plugin, so commands are from the documentation
               DigitalClock(
@@ -71,7 +74,7 @@ class CTT extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 30,
                 ),
-                amPmDigitTextStyle: TextStyle(color: Color(0xFF4d79ff), fontWeight: FontWeight.bold),
+                amPmDigitTextStyle: TextStyle(color: Color(0xFF809fff), fontWeight: FontWeight.bold),
               ),
               Text('════════════',textAlign: TextAlign.center,style: TextStyle(color:Color(0xFF4d4d4d),fontSize: 20)),
               if(curr_day=='Monday')
@@ -148,8 +151,8 @@ class CTT extends StatelessWidget {
               ),
             );
           },
-          child: Icon(Icons.sort_sharp,color:Color(0xFFffffff),),
-          backgroundColor: Color(0xFF00134d),
+          child: Icon(Icons.sort_sharp,color:Color(0xFF000000),),
+          backgroundColor: Color(0xFF809fff),
         ),
         drawer:
         Container(
