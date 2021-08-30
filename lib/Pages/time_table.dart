@@ -18,9 +18,9 @@ class TimeTable extends StatelessWidget {
   Widget build(BuildContext context) {
     //Only modify these lines to change the timetable according to your needs
     //_________________________________________________________________________________________________________________________________
-    final List<String> mon= ['9:00AM-9:50AM ➔ French\n10:00AM-12:50PM ➔ DBMS Lab\n❖\n1:30PM-2:20PM ➔ DCCN\n2:30PM-3:20PM ➔ DCCN'];
-    final List<String> tue= ['9:00AM-9:50AM ➔ DBMS\n10:00AM-10:50AM ➔ French\n11:00AM-11:50AM ➔ SE\n12:00PM-12:50PM ➔ FLAT\n❖\n1:30PM-4:20PM ➔ DCCN Lab'];
-    final List<String> wed= ['9:00AM-9:50AM ➔ DBMS\n10:00AM-10:50AM ➔ French\n11:00AM-11:50AM ➔ SC/CC\n12:00PM-12:50PM ➔ SE\n❖\n1:30PM-4:20PM ➔ SK Lab'];
+    final List<String> mon= ['9:00AM-9:50AM ➔ OE-1\n10:00AM-12:50PM ➔ DBMS Lab\n❖\n1:30PM-2:20PM ➔ DCCN\n2:30PM-3:20PM ➔ DCCN'];
+    final List<String> tue= ['9:00AM-9:50AM ➔ DBMS\n10:00AM-10:50AM ➔ OE-1\n11:00AM-11:50AM ➔ SE\n12:00PM-12:50PM ➔ FLAT\n❖\n1:30PM-4:20PM ➔ DCCN Lab'];
+    final List<String> wed= ['9:00AM-9:50AM ➔ DBMS\n10:00AM-10:50AM ➔ OE-1\n11:00AM-11:50AM ➔ SC/CC\n12:00PM-12:50PM ➔ SE\n❖\n1:30PM-4:20PM ➔ SK Lab'];
     final List<String> thu= ['9:00AM-9:50AM ➔ SC/CC\n10:00AM-10:50AM ➔ DBMS\n11:00AM-11:50AM ➔ SE\n12:00PM-12:50PM ➔ FLAT\n❖\n1:30PM-4:20PM ➔ SE Lab'];
     final List<String> fri= ['9:00AM-9:50AM ➔ DCCN\n10:00AM-10:50AM ➔ DCCN\n11:00AM-11:50AM ➔ SC/CC\n12:00PM-12:50PM ➔ FLAT'];
     final List<String> sat= [''];
@@ -60,7 +60,7 @@ class TimeTable extends StatelessWidget {
                 child: Container(
                   width: 290,
                   child: Card(
-                    color: Color(0xFF1a1a1a),
+                    color: Color.fromRGBO(0, 0, 0,0.2),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
@@ -91,7 +91,7 @@ class TimeTable extends StatelessWidget {
                 child: Container(
                   width: 290,
                   child: Card(
-                    color: Color(0xFF1a1a1a),
+                    color: Color.fromRGBO(0, 0, 0,0.2),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
@@ -122,7 +122,7 @@ class TimeTable extends StatelessWidget {
                 child: Container(
                   width: 290,
                   child: Card(
-                    color: Color(0xFF1a1a1a),
+                    color: Color.fromRGBO(0, 0, 0,0.2),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
@@ -153,7 +153,7 @@ class TimeTable extends StatelessWidget {
                 child: Container(
                   width: 290,
                   child: Card(
-                    color: Color(0xFF1a1a1a),
+                    color: Color.fromRGBO(0, 0, 0,0.2),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
@@ -184,7 +184,7 @@ class TimeTable extends StatelessWidget {
                 child: Container(
                   width: 290,
                   child: Card(
-                    color: Color(0xFF1a1a1a),
+                    color: Color.fromRGBO(0, 0, 0,0.2),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
