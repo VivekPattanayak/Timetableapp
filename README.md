@@ -1,4 +1,4 @@
-# bit_timetable
+# timetable  app
 
 Simple app to view timetable.
 
